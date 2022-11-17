@@ -7,7 +7,7 @@ body{
 }
 
 main{
-    border:1px solid gray;
+    border:1px solid rgb(170, 166, 166);
     border-radius: 5px;
     display: grid;
     grid-template-areas:"a  a   a"
@@ -45,12 +45,13 @@ aside{
 nav{
     grid-area: n;
     color: white;
+    text-align: center;
 }
 nav ul{
     display: grid;
     grid-template-columns: 150px 150px 150px;
     grid-gap: 10px;
-    padding-left:0px ;
+    padding-left:10px ;
 }
 aside ul{
     padding-left:0px ;
@@ -78,6 +79,7 @@ img{
 }
 aside li{
     display:grid;
+    grid-template-columns: 1fr 1fr;
    
 }
 
@@ -90,8 +92,11 @@ footer{
 
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:700px){
    main{
+    border:1px solid rgb(170, 166, 166);
+    border-radius: 5px;
+    display: grid;
     grid-template-areas:"a  a   a"
                         "n  n   n"
                         "ar  ar   as"
@@ -100,6 +105,22 @@ footer{
    article{
     grid-template-columns: 1fr 1fr;
    }
+
+}
+@media only screen and (max-width: 400px) {
+    main{
+        grid-template-columns: 1fr;
+        gap: 10px;
+        grid-template-areas: "a"
+                                "as"
+                                "n"
+                                "ar" 
+                                "f";
+    }
+    article{
+        grid-template-columns: 1fr ;
+       }
+
 
 }
 
